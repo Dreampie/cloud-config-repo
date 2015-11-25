@@ -17,6 +17,7 @@ spring:
     addresses: ${RABBITMQ_URL:localhost:5672}
     username: ${RABBITMQ_USERNAME:guest}
     password: ${RABBITMQ_PASSWORD:guest}
+    virtual_host: /
 
 eureka:
   instance:
