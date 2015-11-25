@@ -17,10 +17,6 @@ spring:
     addresses: ${vcap.services.${PREFIX:}rabbitmq.credentials.uri:amqp://${RABBITMQ_HOST:127.0.0.1}:${RABBITMQ_PORT:5672}}
     username: ${RABBITMQ_USERNAME:guest}
     password: ${RABBITMQ_PASSWORD:guest}
-  sleuth:
-      log:
-        json:
-          enabled: true
 
 eureka:
   instance:
@@ -40,5 +36,5 @@ logging:
   level:
     ROOT: INFO
   pattern:
-    console: '%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger - %msg%n'
-    file: './logs/${spring.application.name}.%d{yyyy-MM-dd}.log'
+    console: %d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger - %msg%n
+    file: ./logs/${spring.application.name}.%d{yyyy-MM-dd}.log
