@@ -12,9 +12,11 @@ endpoints:
 spring:
   data:
     mongodb:
-      uri: ${MONGODB_URL:mongodb://127.0.0.1:27017}/stores
+      uri: mongodb://127.0.0.1:27017/stores
   rabbitmq:
-    addresses: ${RABBITMQ_URL:amqp://guest:guest@127.0.0.1:5672}
+    addresses: ${RABBITMQ_URL:amqp://127.0.0.1:5672}
+    username: guest
+    password: guest
     virtual-host: /
     dynamic: true
 
@@ -35,7 +37,7 @@ zuul:
 logging:
   level:
     ROOT: DEBUG
-  path: ./logs/
+  path: ./logs
   pattern:
     console: '%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger - %msg%n'
     file: './logs/${spring.application.name}.%d{yyyy-MM-dd}.log'
