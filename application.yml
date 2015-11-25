@@ -17,6 +17,10 @@ spring:
     addresses: ${vcap.services.${PREFIX:}rabbitmq.credentials.uri:amqp://${RABBITMQ_HOST:127.0.0.1}:${RABBITMQ_PORT:5672}}
     username: ${RABBITMQ_USERNAME:guest}
     password: ${RABBITMQ_PASSWORD:guest}
+  sleuth:
+      log:
+        json:
+          enabled: true
 
 eureka:
   instance:
