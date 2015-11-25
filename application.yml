@@ -35,7 +35,6 @@ zuul:
 logging:
   level:
     ROOT: INFO
-  console:
-    pattern: '%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger - %msg%n'
-  file:
-    pattern: './logs/${spring.application.name}.%d{yyyy-MM-dd}.log'
+  pattern:
+    console: '%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger - %msg%n'
+    file: './logs/${spring.application.name}.%d{yyyy-MM-dd}.log'
