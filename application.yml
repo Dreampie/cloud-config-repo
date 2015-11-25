@@ -35,4 +35,6 @@ zuul:
 logging:
   level:
     ROOT: INFO
-  file: ./logs/${spring.application.name}.log
+  pattern:
+      console: %d{yyyy-MM-dd HH:mm:ss.SSS} [trace=%X{X-Trace-Id:-},span=%X{X-Span-Id:-}] [%15.15t] %-40.40logger{39}: %m%n
+  file: ./logs/${spring.application.name}.%d{yyyy-MM-dd}.log
