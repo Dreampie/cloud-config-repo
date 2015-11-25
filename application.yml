@@ -27,6 +27,11 @@ eureka:
     serviceUrl:
       defaultZone: ${vcap.services.cloud-service-registry.credentials.uri:http://127.0.0.1:8761}/eureka/
 
+zuul:
+  routes:
+    user-service: /users/**
+    video-service: /videos/**
+
 logging:
   level:
     ROOT: INFO
