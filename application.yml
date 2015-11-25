@@ -12,9 +12,9 @@ endpoints:
 spring:
   data:
     mongodb:
-      uri: mongodb://${MONGODB_HOST:127.0.0.1}:${MONGODB_PORT:27017}/stores
+      uri: ${MONGODB_URL:mongodb://127.0.0.1:27017}/stores
   rabbitmq:
-    addresses: amqp://${RABBITMQ_HOST:127.0.0.1}:${RABBITMQ_PORT:5672}
+    addresses: ${RABBITMQ_URL:amqp://127.0.0.1:5672}
     username: ${RABBITMQ_USERNAME:guest}
     password: ${RABBITMQ_PASSWORD:guest}
 
@@ -25,7 +25,7 @@ eureka:
       instanceId: ${spring.application.name}:${server.port:8080}
   client:
     serviceUrl:
-      defaultZone: http://${EUREKA_HOST:127.0.0.1}:${EUREKA_PORT:8761}/eureka/
+      defaultZone: ${EUREKA_SERVER_URL:http://127.0.0.1:8761}/eureka/
 
 zuul:
   routes:
