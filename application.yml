@@ -33,7 +33,7 @@ zuul:
 
 logging:
   level:
-    ROOT: DEBUG
+    ROOT: INFO
   path: ./logs
 #  pattern:
 #    console: '%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger - %msg%n'
