@@ -9,19 +9,13 @@ endpoints:
   health:
     sensitive: false
 
-    spring:
-      data:
-        mongodb:
-          uri: ${MONGODB_URL:mongodb://127.0.0.1:27017/stores}
-      rabbitmq:
-        addresses: ${RABBITMQ_URL:amqp://guest:guest@127.0.0.1:5672}
-        virtual-host: /
-
-    Protocol	Bound to	Port
-    amqp	127.0.0.1	5672
-    clustering	::	25672
-    mqtt	::	1883
-    stomp	::	61613
+spring:
+  data:
+    mongodb:
+      uri: ${MONGODB_URL:mongodb://127.0.0.1:27017/stores}
+  rabbitmq:
+    addresses: ${RABBITMQ_URL:amqp://guest:guest@127.0.0.1:5672}
+    virtual-host: /
 
 eureka:
   instance:
