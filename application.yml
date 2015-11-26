@@ -37,4 +37,4 @@ logging:
   path: ./logs
   pattern:
     console: '%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger - %msg%n'
-    file: './logs/${spring.application.name}.%d{yyyy-MM-dd}.log'
+  file: './logs/${spring.application.name}.%d{yyyy-MM-dd}.log'
