@@ -14,7 +14,9 @@ spring:
     mongodb:
       uri: ${MONGODB_URL:mongodb://localhost:27017/stores}
   rabbitmq:
-    addresses: ${RABBITMQ_URL:amqp://guest:guest@localhost:5672}
+    addresses: ${RABBITMQ_URL:localhost:5672}
+    username: ${RABBITMQ_USERNAME:guest}
+    password: ${RABBITMQ_PASSWORD:guest}
     virtual-host: /
 
 eureka:
