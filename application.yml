@@ -28,8 +28,8 @@ eureka:
 
 zuul:
   routes:
-    user-service: /users/**
-    video-service: /videos/**
+    user-service-provider: /users/**
+    video-service-provider: /videos/**
 
 logging:
   level:
