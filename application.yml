@@ -21,7 +21,7 @@ eureka:
   instance:
     leaseRenewalIntervalInSeconds: 10
     metadataMap:
-      instanceId: ${spring.application.name}:${spring.application.instance_id:${server.port:8080}}
+      instanceId: ${EUREKA_INSTANCE_ID:${spring.application.name}:${spring.application.instance_id:${server.port:8080}}}
   password: eureka
   client:
     serviceUrl:
