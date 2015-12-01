@@ -22,11 +22,10 @@ eureka:
     leaseRenewalIntervalInSeconds: 10
     metadataMap:
       instanceId: ${spring.application.name}:${spring.application.instance_id:${server.port:8080}}
+  password: eureka
   client:
-    password: eureka
-      client:
-        serviceUrl:
-          defaultZone: ${EUREKA_SERVER_URL:http://user:${eureka.password}@127.0.0.1:8761/eureka/}
+    serviceUrl:
+      defaultZone: ${EUREKA_SERVER_URL:http://user:${eureka.password}@127.0.0.1:8761/eureka/}
 
 logging:
   level:
