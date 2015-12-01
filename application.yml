@@ -23,13 +23,10 @@ eureka:
     metadataMap:
       instanceId: ${spring.application.name}:${spring.application.instance_id:${server.port:8080}}
   client:
-    serviceUrl:
-      defaultZone: ${EUREKA_SERVER_URL:http://127.0.0.1:8761/eureka/}
-
-zuul:
-  routes:
-    user-service-provider: /users/**
-    video-service-provider: /videos/**
+    password: eureka
+      client:
+        serviceUrl:
+          defaultZone: ${EUREKA_SERVER_URL:http://user:${eureka.password}@127.0.0.1:8761/eureka/}
 
 logging:
   level:
