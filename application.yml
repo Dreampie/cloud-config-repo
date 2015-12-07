@@ -12,16 +12,16 @@ endpoints:
 spring:
   data:
     mongodb:
-      uri: ${MONGODB_URL:mongodb://127.0.0.1:27017/stores}
+      uri: ${MONGODB_URL:mongodb://192.168.60.41:27017/stores}
   rabbitmq:
-    addresses: ${RABBITMQ_URL:amqp://guest:guest@127.0.0.1:5672}
+    addresses: ${RABBITMQ_URL:amqp://guest:guest@192.168.60.41:5672}
     virtual-host: /
 
 eureka:
   password: eureka
   client:
     serviceUrl:
-      defaultZone: ${EUREKA_SERVER_URL:http://user:${eureka.password}@127.0.0.1:8761/eureka/}
+      defaultZone: ${EUREKA_SERVER_URL:http://user:${eureka.password}@192.168.60.41:8761/eureka/}
   instance:
     leaseRenewalIntervalInSeconds: 10
     metadataMap:
