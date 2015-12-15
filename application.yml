@@ -31,6 +31,5 @@ eureka:
 logging:
   level:
     ROOT: INFO
-  path: ./logs
   pattern:
     file: ${spring.application.name}.%d{yyyy-MM-dd}.log
