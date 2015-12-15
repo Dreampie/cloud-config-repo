@@ -3,3 +3,10 @@ server:
 
 management:
   port: 8990
+
+---
+spring:
+  profiles: cloud
+
+management:
+  port: -1
