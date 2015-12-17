@@ -14,6 +14,7 @@ spring:
     mongodb:
       uri: ${MONGODB_URL:mongodb://192.168.60.41:27017/stores}
   rabbitmq:
+    host: rabbitmq
     addresses: ${RABBITMQ_URL:amqp://guest:guest@192.168.60.41:5672}
     virtual-host: /
 
