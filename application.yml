@@ -21,7 +21,7 @@ eureka:
   password: eureka
   client:
     serviceUrl:
-      defaultZone: ${EUREKA_SERVER_URL:http://user:${eureka.password}@192.168.60.41:8761/eureka/}
+      defaultZone: ${EUREKA_SERVER_URL_1:http://user:${eureka.password}@192.168.60.41:8761/eureka/},${EUREKA_SERVER_URL_1:http://user:${eureka.password}@192.168.60.43:8761/eureka/}
   instance:
     preferIpAddress: true
     leaseRenewalIntervalInSeconds: 10
