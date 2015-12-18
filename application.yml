@@ -24,7 +24,7 @@ eureka:
     serviceUrl:
       defaultZone: ${EUREKA_SERVER_URL_1:http://user:${eureka.password}@192.168.60.41:8761/eureka/},${EUREKA_SERVER_URL_2:http://user:${eureka.password}@192.168.60.43:8761/eureka/}
   instance:
-    preferIpAddress: false
+    preferIpAddress: true
     leaseRenewalIntervalInSeconds: 10
     metadataMap:
       instanceId: ${EUREKA_INSTANCE_ID:${spring.application.name}:${spring.application.instance_id:${server.port:8080}}}
